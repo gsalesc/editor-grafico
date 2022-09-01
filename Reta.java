@@ -1,6 +1,6 @@
 
 /**
- * REta matematica.
+ * Clase de definição de retas
  *
  * @author Julio
  * @version 12/08/2020
@@ -13,6 +13,10 @@ public class Reta {
     /**
      * Constructor for objects of class Reta
      */
+    public Reta(){
+    
+    }
+    
     public Reta(int x1, int y1, int x2, int y2) {
         setP1(new Ponto(x1, y1));
         setP2(new Ponto(x2, y2));

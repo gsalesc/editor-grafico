@@ -15,9 +15,13 @@ public class FiguraCirculo
     }*/
     
     
-    public static void desenharPontos(Graphics g, int cX, int cY, int rx, int ry, Color cor, int esp){
+    public static void desenharCirculo(Graphics g, int cX, int cY, int rx, int ry, Color cor, int esp){
             CirculoGr c = new CirculoGr(cX, cY, rx, ry, cor, esp);
             c.desenharCirculo(g);
+    }
+    
+    public static void apagarCirculo(Graphics g, Color c){
+            CirculoGr.apagarCirculo(g, c);
     }
     
 }

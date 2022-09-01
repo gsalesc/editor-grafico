@@ -9,10 +9,10 @@ import java.awt.Graphics;
  */
 public class FiguraPontos
 {
-    public static void desenharPonto(Graphics g, double x, double y, int diametro){
-            Color cor = new Color((int) (Math.random() * 256),  
+    public static void desenharPonto(Graphics g, double x, double y, int diametro, Color cor){
+            /*Color cor = new Color((int) (Math.random() * 256),  
                     (int) (Math.random() * 256),  
-                    (int) (Math.random() * 256));
+                    (int) (Math.random() * 256));*/
             PontoGr p = new PontoGr((int)x, (int)y, cor, diametro);
             p.desenharPonto(g);
     }

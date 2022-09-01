@@ -2,12 +2,15 @@
 
 import java.awt.Color;
 import java.awt.Graphics;
+import java.util.ArrayList;
 
 public class PontoGr extends Ponto {
     Color corPto = Color.BLACK; // cor do ponto
     String nomePto = ""; // nome do ponto
     Color corNomePto  = Color.BLACK; // cor do nome (string) do ponto  
     int diametro = 1; // diametro do ponto, default = 1
+    Color cor;
+    int espessura;
 
     PontoGr(int x, int y){
         super((double)x, (double)y);
@@ -34,6 +37,8 @@ public class PontoGr extends Ponto {
     public PontoGr(int x, int y, Color corPonto, int diametro){
         this(x, y, corPonto);
         setDiametro(diametro);
+        setCorPto(corPonto);
+        setEsp(diametro);
     }
 
     /**
@@ -48,6 +53,8 @@ public class PontoGr extends Ponto {
     public PontoGr(int x, int y, Color corPonto, String nomePonto, int diametro){
         this(x, y, corPonto, diametro);
         setNomePto(nomePonto);
+        setCorNomePto(corPonto);
+        setEsp(diametro);
     }
     PontoGr(int x, int y, Color cor, String str){
         super((double)x, (double)y);
@@ -83,6 +90,8 @@ public class PontoGr extends Ponto {
      */
     public void setCorPto(Color corPto) {
         this.corPto = corPto;
+        this.cor = corPto;
+        this.corPto = this.cor;
     }
 
     /**
@@ -127,6 +136,13 @@ public class PontoGr extends Ponto {
         this.diametro = diametro;
     }
 
+    public void setEsp(int e){
+        this.espessura = e;
+    }
+    
+    public int getEsp(){
+        return this.espessura;
+    }
     /**
      * desenha um ponto utilizando o oval 
      * 
@@ -135,10 +151,25 @@ public class PontoGr extends Ponto {
     public void desenharPonto(Graphics g){
         // desenha ponto como um oval
         g.setColor(getCorPto());
-        g.fillOval((int)getX() -(getDiametro()/2), (int)getY() - (getDiametro()/2), getDiametro(), getDiametro());
+        int x = (int)getX();
+        int y = (int)getY();
+        g.fillOval(x -(getDiametro()/2), y - (getDiametro()/2), getDiametro(), getDiametro());
 
         // desenha nome do ponto
        // g.setColor(getCorNomePto());
-       // g.drawString(getNomePto(), (int)getX() + getDiametro(), (int)getY());
+       // g.drawString(getNomePto(), (int)getX() +
+    }
+    
+    public void desenharPonto(Graphics g, ArrayList v){
+        // desenha ponto como um oval
+        g.setColor(getCorPto());
+        int x = (int)getX();
+        int y = (int)getY();
+        g.fillOval(x -(getDiametro()/2), y - (getDiametro()/2), getDiametro(), getDiametro());
+
+        // desenha nome do ponto
+       // g.setColor(getCorNomePto());
+       // g.drawString(getNomePto(), (int)getX() +
     }
 }
+       

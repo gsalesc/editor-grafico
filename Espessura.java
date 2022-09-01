@@ -20,6 +20,7 @@ public class Espessura extends JFrame implements ChangeListener
 {
     private JButton btnConfirmar;
     private JSlider slEspessura;
+    private int esp;
     GUI g;
 
     Espessura(){
@@ -35,12 +36,12 @@ public class Espessura extends JFrame implements ChangeListener
         this.add(btnConfirmar);
     }
     
-   Espessura(GUI g){
+   Espessura(GUI g, int esp){
         this.setSize(400, 150);
         this.setTitle("Espessura");
         this.setLayout(new GridLayout(2,1));
         this.setLocationRelativeTo(null);
-        
+        this.esp = esp;
         slEspessura = criarJSlider();
         
         btnConfirmar = new JButton("Confirmar");
@@ -59,7 +60,7 @@ public class Espessura extends JFrame implements ChangeListener
     }
     
     private JSlider criarJSlider(){
-        JSlider espessura = new JSlider(0, 100, 5);
+        JSlider espessura = new JSlider(0, 100, esp);
         espessura.setMajorTickSpacing(5);
         espessura.setPaintTicks(true);
         espessura.setPaintTrack(true);
