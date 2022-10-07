@@ -1,4 +1,6 @@
 
+package reta;
+import ponto.*;
 /**
  * Clase de definição de retas
  *

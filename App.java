@@ -1,9 +1,9 @@
 
 /**
- * Escreva uma descrição da classe App aqui.
+ * Interface gráfica principal
  * 
- * @author (seu nome) 
- * @version (um número da versão ou uma data)
+ * @author Gabriel Sales 
+ * @version
  */
 public class App
 {

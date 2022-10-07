@@ -1,3 +1,4 @@
+package circulo;
 import java.awt.Graphics;
 import java.awt.Color;
 
@@ -15,13 +16,17 @@ public class FiguraCirculo
     }*/
     
     
-    public static void desenharCirculo(Graphics g, int cX, int cY, int rx, int ry, Color cor, int esp){
+    public void desenharCirculo(Graphics g, int cX, int cY, int rx, int ry, Color cor, int esp){
             CirculoGr c = new CirculoGr(cX, cY, rx, ry, cor, esp);
-            c.desenharCirculo(g);
+            c.desenharCirculo(g, c);
     }
     
     public static void apagarCirculo(Graphics g, Color c){
             CirculoGr.apagarCirculo(g, c);
+    }
+    
+    public static void redesenharCirculo(Graphics g){
+            CirculoGr.redesenharCirculo(g);
     }
     
 }
