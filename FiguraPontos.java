@@ -1,5 +1,8 @@
+package ponto;
+
 import java.awt.Color;
 import java.awt.Graphics;
+
 
 /**
  * Escreva uma descrição da classe FiguraPontos aqui.

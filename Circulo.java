@@ -1,3 +1,7 @@
+package circulo;
+
+import ponto.*;
+
 
 /**
  * Escreva uma descrição da classe Circulo aqui.

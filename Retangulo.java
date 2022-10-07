@@ -1,4 +1,5 @@
-
+package retangulo;
+import ponto.*;
 /**
  * Escreva uma descrição da classe Retangulo aqui.
  * 

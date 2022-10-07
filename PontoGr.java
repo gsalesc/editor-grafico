@@ -1,5 +1,4 @@
- 
-
+package ponto;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.util.ArrayList;
@@ -11,6 +10,7 @@ public class PontoGr extends Ponto {
     int diametro = 1; // diametro do ponto, default = 1
     Color cor;
     int espessura;
+    //static ArrayList<PontoGr> listaPonto = new ArrayList<PontoGr>();
 
     PontoGr(int x, int y){
         super((double)x, (double)y);
